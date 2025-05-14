@@ -1,0 +1,20 @@
+cat > rechte_cheats.txt <<EOF
+🔐 RECHTE & BENUTZER CHEAT SHEET
+
+--- chmod ---
+chmod 755 datei               # rwxr-xr-x (häufig bei Programmen)
+chmod 644 datei               # rw-r--r-- (häufig bei Textdateien)
+chmod +x script.sh            # Ausführbar machen
+chmod u+x datei               # Besitzer darf ausführen
+
+--- chown ---
+chown user datei              # Besitzer ändern
+chown user:gruppe datei       # Besitzer + Gruppe ändern
+
+--- Benutzer & Gruppen ---
+id                            # Zeigt UID, GID, Gruppen
+adduser name                  # Benutzer hinzufügen
+usermod -aG gruppe user       # Zur Gruppe hinzufügen
+groupadd gruppe               # Neue Gruppe erstellen
+passwd name                   # Passwort setzen
+EOF
