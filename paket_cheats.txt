@@ -1,0 +1,24 @@
+cat > paket_cheats.txt <<EOF
+📦 PAKETVERWALTUNG CHEAT SHEET (APT, DPKG, SNAP)
+
+--- apt (Debian/Ubuntu) ---
+sudo apt update               # Paketliste aktualisieren
+sudo apt upgrade              # Alle Pakete aktualisieren
+sudo apt install paket        # Paket installieren
+sudo apt remove paket         # Nur Paket entfernen
+sudo apt purge paket          # + Konfigurationsdateien
+sudo apt autoremove           # Nicht mehr benötigte Pakete entfernen
+apt list --installed          # Installierte Pakete anzeigen
+apt search name               # Nach Paket suchen
+
+--- dpkg ---
+dpkg -i paket.deb             # Lokales .deb-Paket installieren
+dpkg -l                       # Alle installierten Pakete
+dpkg -L paket                 # Dateien, die Paket installiert hat
+dpkg -r paket                 # Paket entfernen
+
+--- snap ---
+snap list                     # Installierte Snap-Pakete
+sudo snap install name        # Snap-Paket installieren
+sudo snap remove name         # Snap entfernen
+EOF
