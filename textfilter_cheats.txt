@@ -1,0 +1,24 @@
+cat > textfilter_cheats.txt <<EOF
+🔎 TEXTFILTER CHEAT SHEET (grep, cut, awk, sed)
+
+--- grep ---
+grep "text" datei              # Text in Datei suchen
+grep -i "wort" datei           # Ohne Groß-/Kleinschreibung
+grep -r "text" .               # Rekursiv suchen im Verzeichnis
+grep -n "text" datei           # Zeilennummer anzeigen
+grep -v "Fehler" datei         # Zeilen OHNE "Fehler"
+
+--- cut ---
+cut -d ':' -f1 datei           # Erstes Feld mit ':' als Trennzeichen
+cut -c1-10 datei               # Zeichen 1 bis 10 jeder Zeile
+
+--- awk ---
+awk '{print \$1}' datei         # Erstes Feld jeder Zeile anzeigen
+awk -F',' '{print \$2}' datei   # Mit Komma als Trennzeichen
+awk '/Fehler/ {print \$0}'      # Zeilen mit "Fehler" ausgeben
+
+--- sed ---
+sed 's/alt/neu/' datei         # Erstes Vorkommen ersetzen
+sed 's/alt/neu/g' datei        # Alle ersetzen in Zeile
+sed -n 5,10p datei             # Nur Zeilen 5 bis 10 anzeigen
+EOF
