@@ -1,0 +1,34 @@
+cat > tar_cheats.txt <<EOF
+📦 TAR CHEAT SHEET – Archivieren und Entpacken
+
+🧱 BASISBEFEHLE
+
+tar -cf archiv.tar ordner       # Archiv erstellen ohne Kompression
+tar -xf archiv.tar              # Archiv entpacken
+tar -tf archiv.tar              # Inhalt anzeigen
+
+🗜️ MIT KOMPRESSION
+
+tar -czf archiv.tar.gz ordner   # Archiv mit gzip
+tar -cjf archiv.tar.bz2 ordner  # Archiv mit bzip2
+tar -caf archiv.tar.xz ordner   # Archiv mit xz (neuer Standard)
+
+tar -xzf archiv.tar.gz          # gzip-Archiv entpacken
+tar -xjf archiv.tar.bz2         # bzip2-Archiv entpacken
+tar -xaf archiv.tar.xz          # xz-Archiv entpacken
+
+🧰 NÜTZLICHES
+
+tar -vczf backup.tgz .          # Aktuelles Verzeichnis als .tgz mit Anzeige
+tar -C /ziel/pfad -xf archiv.tar  # Entpacken in anderes Verzeichnis
+tar --delete -f archiv.tar datei.txt  # Datei aus Archiv löschen
+
+📄 ENDTYPEN
+
+.tar      = Archiv ohne Kompression
+.tar.gz   = Archiv mit gzip
+.tar.bz2  = Archiv mit bzip2
+.tar.xz   = Archiv mit xz
+.tgz      = Kurzform für .tar.gz
+
+EOF
